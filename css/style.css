@@ -1,0 +1,415 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+img {
+	max-width: 100%;
+}
+
+input:focus, select:focus, button:focus, textarea:focus {
+	outline: none;
+}
+
+a:hover, a:focus {
+	text-decoration: none;
+	outline: none;
+}
+
+/*---------------------
+  Commom elements
+-----------------------*/
+
+/* Preloder */
+
+#preloder {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 999999;
+	background: #fff;
+}
+
+.loader {
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -13px;
+	margin-left: -13px;
+	border-radius: 60px;
+	animation: loader 0.8s linear infinite;
+	-webkit-animation: loader 0.8s linear infinite;
+}
+
+@keyframes loader {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+		border: 4px solid #f44336;
+		border-left-color: transparent;
+	}
+	50% {
+		-webkit-transform: rotate(180deg);
+		transform: rotate(180deg);
+		border: 4px solid #673ab7;
+		border-left-color: transparent;
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+		border: 4px solid #f44336;
+		border-left-color: transparent;
+	}
+}
+
+@-webkit-keyframes loader {
+	0% {
+		-webkit-transform: rotate(0deg);
+		border: 4px solid #f44336;
+		border-left-color: transparent;
+	}
+	50% {
+		-webkit-transform: rotate(180deg);
+		border: 4px solid #673ab7;
+		border-left-color: transparent;
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		border: 4px solid #f44336;
+		border-left-color: transparent;
+	}
+}
+
+/* header */
+header {
+	width: 100%;
+	height: 100%;
+	background: #131313;
+	overflow: hidden;
+	padding: 18px 0;
+	border-bottom: 1px solid #ffb320;
+}
+
+.site-logo {
+	display: inline-block;
+	padding-top: 10px;
+}
+
+.user-panel {
+	float: right;
+	font-weight: 500;
+	background: #ffb320;
+	margin-top: 2px;
+	padding: 12px 28px;
+	border-radius: 30px;
+	transition: .3s;
+	font-size: 14px;
+	color: #131313;
+
+}
+
+.user-panel:hover {
+	background: rgba(255, 179, 32, .8);
+	cursor: pointer;
+}
+
+.user-login {
+	margin-top: 10px !important;
+}
+
+.main-menu {
+	float: right;
+	margin-top: 12px;
+	margin-right: 110px;
+}
+
+.main-menu ul li {
+	display: inline;
+}
+
+.main-menu ul li a {
+	display: inline-block;
+	font-size: 16px;
+	line-height: 16px;
+	color: #fff;
+	margin-left: 35px;
+	font-weight: 500;
+	padding: 0px 5px;
+}
+
+.main-menu ul li a:hover {
+	color: #ffb320;
+}
+
+/* visual */
+.visual {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.visualText {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	padding: 7.5vw;
+}
+
+.visualText > h3 {
+	color: #fff;
+	text-shadow: 1px 1px 6px rgba(0, 0, 0, .6);
+	font-size: 2.2vw;
+}
+
+.visualText > h1 {
+	color: #ffb320;
+	text-shadow: 1px 1px 6px rgba(0, 0, 0, .6);
+	font-size: 4vw;
+	
+}
+
+#main {
+	background: linear-gradient(45deg,  rgba(66, 183, 245,0.8) 0%,rgba(66, 245, 189,0.4) 100%);
+	padding-bottom: 50px;
+}
+
+.main_info {
+	width: 100%;
+	height: 400px;
+}
+
+.deg {
+	width: 53%;
+	height: 100%;
+	transform: translateX(-54px) skewX(-12deg);
+	background: #ffb320;
+	z-index: -12345;
+	padding: 80px;
+}
+
+.page {
+	width: 100%;
+	height: 100%;
+	display: flex;
+
+}
+
+.textBox {
+	font-size: 25px;
+}
+
+.textBox > h1 {
+	margin: 20px 0;
+}
+
+.game {
+	background-image: url("/images/back.png");
+	box-shadow: -3px 2px 38px rgba(0, 0, 0, .25);
+}
+
+#myGame {
+	border: 1px solid #ddd;
+}
+
+#startImg {
+	position: absolute;
+	left: 0%;
+	top: -6%;
+}
+
+#startBtn {
+	font-size: 145px;
+	font-style: italic;
+	color: #fff;
+	text-shadow: 1px 1px 12px #fff;
+	position: absolute;
+	left: 16%;
+	top: 60%;
+	background: none;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	transition: .3s;
+	/* display: none; */
+}
+
+#startBtn:hover {
+	text-shadow: 1px 1px 21px #fff;
+	transform: scale(1.1);
+}
+
+.deg > center > p:first-child {
+	text-align: left;
+}
+
+.deg > center > p:last-child {
+	text-align: right;
+}
+
+.scrollBox {
+	margin: 18px;
+}
+
+/* input-form */
+
+.input-container {
+	width: 50%;
+	margin: 0 auto;
+	margin-top: 70px;
+}
+
+.input-form {
+	width: 100%;
+	margin: 20px 0;
+}
+
+.input-form > input, .input-form > label {
+	width: 100%;
+	height: 38px;
+	padding: 10px;
+	font-size: 18px;
+	margin: 0 auto;
+}
+
+.btnBox {
+	display: flex;
+	justify-content: flex-end;
+}
+
+#naverIdLogin {
+	float: left;
+}
+
+.btnBox > input {
+	height: 40px;
+	margin-left: 8px;
+}
+
+.panel {
+	text-align: center;
+}
+
+.panel > h1 {
+	margin: 42px;
+}
+
+.registerNaverBtn {
+	width: 100%;
+	height: 100%;
+}
+
+.registerPage {
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(45deg,  rgba(66, 183, 245,0.8) 0%,rgba(66, 245, 189,0.4) 100%);
+	padding: 100px;
+}
+
+.registerBox {
+	width: 90%;
+	height: 100%;
+	margin: 0 auto;
+	padding: 150px;
+	background: #fff;
+	border-radius: 8px;
+	box-shadow: -3px 2px 38px rgba(0, 0, 0, .25);
+}
+
+.registerBox h1 {
+	color: #4285F4;
+	font-weight: 800;
+}
+
+.registerBox .input-form > input {
+	background: rgba(0, 0, 0, 0.05);
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 4px;
+}
+
+.registerBox .input-form > label {
+	color: rgba(0, 0, 0, 0.6);
+}
+
+.registerBtn {
+	width: 100%;
+	height: 60px;
+	font-weight: bold;
+}
+
+.index-card {
+	margin: 20px 3px;
+	padding: 10px;
+}
+
+.index-card-img {
+	width: 50%;
+	height: 38%;
+	margin: auto;
+}
+
+footer {
+	width: 100%;
+	height: 100%;
+	background: #007b5e;
+	padding: 20px;
+	color: #fff;
+}
+
+.footerBox {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 30px;
+}
+
+.footerUnit {
+	width: 100%;
+	margin: 0 auto;
+	padding: 15px;
+}
+
+.footerUnit h2 {
+	border-left: 4px solid #fff;
+	padding: 0 15px;
+}
+
+footer a {
+	display: flex;
+	flex-direction: column;
+	color: #fff;
+	transition: .5s;
+	margin: 15px 0;
+}
+
+footer a:hover {
+	color: #fff;
+	margin-left: 8px;
+}
+
+.footerContent i {
+	transition: all .2s;
+}
+
+.footerContent i:hover {
+	font-weight: bold;
+}
+
+.footerSNS {
+	margin: 10px 0;
+}
+
+.footerSNS li {
+	font-size: 28px;
+	transition: .5s;
+	margin: 0 10px;
+	cursor: pointer;
+}
+
+.footerSNS li:hover {
+	transform: scale(1.2);
+}
